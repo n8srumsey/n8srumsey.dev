@@ -27,7 +27,7 @@ function BlogPost() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} align="center" justify="center">
+    <Card className={classes.root} align="center" justify="center" m={2}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -64,6 +64,7 @@ export default function BlogAdmin() {
       justifyContent="flex-start"
       alignItems="center"
       flexWrap="wrap"
+      spacing={1}
     >
       <Typography component="h4" variant="h4">
         Blog Admin!!
