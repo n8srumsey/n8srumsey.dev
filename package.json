@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@material-ui/core": "^4.12.1",
-    "react-remove-scroll-bar": "^2.2.0"
-  }
-}
