@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 
 const blogPostSchema = mongoose.Schema({
     title: String,
-    id: String,
-    // postImage: image,
+    postId: String,
+    image: String,
     content: String,
     summary: String,
     tags: [String],
@@ -15,7 +15,6 @@ const blogPostSchema = mongoose.Schema({
         type: Date,
         default: new Date()
     },
-    
 });
 
 const BlogPost = mongoose.model('BlogPost', blogPostSchema);
