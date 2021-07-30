@@ -15,11 +15,13 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={MainPage}/>
         <Route exact path='/blog' component = {Blog}/>
-        <Route path='/blog/admin' component = {BlogAdmin}/>
+        <Route exact path='/blog/admin' component = {BlogAdmin}/>
         <Route path='/blog/:postId' component = {Blog}/>
+        <Route path='/blog/admin/:postId' component = {Blog}/>
         <Route exact path='/projects' component = {Projects}/>
         <Route path='/project/:projectId' component = {MainPage}/> 
-        <Route path='/projects/admin' component = {MainPage}/>
+        <Route exact path='/projects/admin' component = {MainPage}/>
+        <Route path='/projects/admin/:projectId' component = {MainPage}/>
       </Switch>
     </Router>
   );
