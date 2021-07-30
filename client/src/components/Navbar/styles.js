@@ -4,18 +4,23 @@ export default makeStyles(() => ({
   Navbar: {
       backgroundColor: "transparent",
       width: "100%",
-      height: "20px",
+      height: "45px",
       display: "flex",
-      justifyContent: "left",
       alignItems: "center",
   },
   NavbarLeft: {
-    flex: "50%"
+    height: "45px",
+    flex: "50%",
+    display: "flex",
+    justifyContent: "left",
   },
   NavbarRight: {
+    height: "45px",
     flex: "50%",
+    display: "flex",
+    justifyContent: "right",
   },
   SiteName: {
-      color: "red"
+      fontSize: "32",
   }
 }));

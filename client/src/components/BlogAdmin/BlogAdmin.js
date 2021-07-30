@@ -17,7 +17,7 @@ const App = () => {
   }, [currentId, dispatch]);
 
   return (
-    <Container>
+    <Container maxWidth="100%">
       <SiteNavbar />
       <Container className={classes.container}>
         <Grow in>
