@@ -24,6 +24,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
+    direction: "column",
   },
   Navbar: {
     backgroundColor: "transparent",
