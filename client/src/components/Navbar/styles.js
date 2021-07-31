@@ -1,26 +1,35 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(() => ({
-  Navbar: {
-      backgroundColor: "transparent",
-      width: "100%",
-      height: "45px",
+export default makeStyles((theme) => ({
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  sectionDesktop: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
       display: "flex",
-      alignItems: "center",
+    },
   },
-  NavbarLeft: {
-    height: "45px",
-    flex: "50%",
+  sectionMobile: {
     display: "flex",
-    justifyContent: "left",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
   },
-  NavbarRight: {
+  Navbar: {
+    backgroundColor: "transparent",
+    xs: "12",
     height: "45px",
-    flex: "50%",
     display: "flex",
-    justifyContent: "right",
+    alignItems: "center",
   },
-  SiteName: {
-      fontSize: "32",
-  }
 }));
