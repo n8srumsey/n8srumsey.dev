@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
+import * as COLORS from "../../../../constants/colors";
 
-export default makeStyles({
+export default makeStyles((theme =>({
   media: {
     height: 0,
     paddingTop: "56.25%",
@@ -20,6 +21,7 @@ export default makeStyles({
     borderRadius: "10px",
     height: "100%",
     position: "relative",
+    backgroundColor: COLORS.DP02,
   },
   overlay: {
     position: "absolute",
@@ -49,4 +51,4 @@ export default makeStyles({
     display: "flex",
     justifyContent: "space-between",
   },
-});
+})));

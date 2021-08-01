@@ -6,15 +6,18 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 import useStyles from "./styles";
 import { useDispatch } from "react-redux";
-import { deletePost, likePost } from "../../../../actions/posts";
+import { deletePost } from "../../../../actions/posts";
+import * as COLORS from "../../../../constants/colors";
+
+import img from '../../../../images/download.jpg';
 
 const Post = ({ post, setCurrentId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
   return (
-    <Card className={classes.card}>
-      <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
+    <Card className={classes.card} >
+      <CardMedia className={classes.media} image={img} title={post.title} />
       <div className={classes.overlay}>
         <Typography variant="h6">{post.creator}</Typography>
         <Typography variant="body2"> moment(post.createdAt).fromNow() </Typography>

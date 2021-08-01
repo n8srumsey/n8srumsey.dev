@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import * as COLORS from "../../constants/colors";
 
 export default makeStyles((theme) => ({
   grow: {
@@ -34,7 +35,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   AppBar: {
-    backgroundColor: "transparent",
+    backgroundColor: COLORS.DP04,
     height: "4rem",
     display: "flex",
     justifyContent: "center",
