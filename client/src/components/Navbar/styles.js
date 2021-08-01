@@ -8,29 +8,44 @@ export default makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
+    display: "block",
+    variant: "h4",
+    [theme.breakpoints.down("md")]: {
+      variant: "h6",
     },
+    marginLeft: "1rem"
   },
   sectionDesktop: {
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",
     },
+    alignItems: "stretch",
+    marginRight: "1rem"
   },
   sectionMobile: {
     display: "flex",
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
-    direction: "column",
+    alignItems: "center",
+    marginRight: "1rem"
+  },
+  AppBar: {
+    backgroundColor: "transparent",
+    height: "4rem",
+    display: "flex",
   },
   Navbar: {
-    backgroundColor: "transparent",
-    xs: "12",
-    height: "45px",
-    display: "flex",
     alignItems: "center",
   },
+  NavbarLink: {
+    color: 'inherit',
+    underline: 'hover',
+    paddingLeft: "2rem",
+    fontWeight: '',
+  },
+  NavbarIcon: {
+    marginTop: '4px'
+  }
 }));
