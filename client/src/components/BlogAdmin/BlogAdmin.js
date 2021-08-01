@@ -6,6 +6,9 @@ import { getPosts } from "../../actions/posts";
 import Posts from "./Posts/Posts";
 import SiteNavbar from "../Navbar/SiteNavbar";
 import useStyles from "./styles";
+import CreateNewButton from "./Widgets/CreateNewButton/CreateNewButton";
+
+import Form from "./Widgets/Form/Form";
 
 const App = () => {
   const [currentId, setCurrentId] = useState(null);
@@ -28,11 +31,13 @@ const App = () => {
               </Grid>
               <Grid contianer item xs={8} sm={8}>
                 <Posts />
+                <Form />
               </Grid>
             </Grid>
           </Container>
         </Grow>
       </Container>
+      <CreateNewButton />
     </Container>
   );
 };
