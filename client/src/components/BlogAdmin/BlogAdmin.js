@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grow, Grid } from "@material-ui/core";
+import { Container, Grow, Grid, Typography } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 
 import { getPosts } from "../../actions/posts";
@@ -23,7 +23,10 @@ const App = () => {
         <Grow in>
           <Container style={{ marginTop: "5em" }}>
             <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
-              <Grid item xs={12} sm={7}>
+              <Grid container item justifyContent="center">
+                <Typography className={classes.heading} variant="h3">Blog Admin</Typography>
+              </Grid>
+              <Grid contianer item xs={8} sm={8}>
                 <Posts />
               </Grid>
             </Grid>

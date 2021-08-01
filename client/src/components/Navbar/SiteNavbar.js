@@ -37,7 +37,7 @@ const SiteNavbar = (props) => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <Link href='/' className={classes.NavbarLink}>Home</Link>
+        <Link href='/' className={classes.NavbarLink}>About</Link>
       </MenuItem>
       <MenuItem>
         <Link href='/projects/' className={classes.NavbarLink}>Projects</Link>
@@ -64,7 +64,7 @@ const SiteNavbar = (props) => {
       <SiteName edge="start" variant="h5" className={classes.title} nowrap >n8srumsey.dev</SiteName> 
         <div className={classes.grow} />
         <div className={classes.sectionDesktop}>
-          <Link href='/' className={classes.NavbarLink} variant="h6">Home</Link>
+          <Link href='/' className={classes.NavbarLink} variant="h6">About</Link>
           <Link href='/projects/' className={classes.NavbarLink} variant="h6">Projects</Link>
           <Link href='/resume/' className={classes.NavbarLink} variant="h6">Resume</Link>
           <Link href='/blog/' className={classes.NavbarLink} variant="h6">Blog</Link>

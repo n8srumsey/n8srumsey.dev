@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-import { useDispatch } from 'react-redux';
+import { Container, Grow, Grid, Typography } from "@material-ui/core";
+import { useDispatch } from "react-redux";
 
-import {getPosts } from '../../actions/posts';
+import { getPosts } from "../../actions/posts";
 import Posts from "./Posts/Posts";
-import memories from "../../images/memories.png";
+import SiteNavbar from "../Navbar/SiteNavbar";
 import useStyles from "./styles";
 
 const App = () => {
@@ -13,32 +13,26 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getPosts())
+    dispatch(getPosts());
   }, [currentId, dispatch]);
 
   return (
-    <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">
-          Blog
-        </Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
-      </AppBar>
-      <Grow in>
-        <Container>
-          <Grid
-            container
-            justifyContent="space-between"
-            alignItems="stretch"
-            spacing={3}
-          >
-            <Grid item xs={12} sm={7}>
-              <Posts setCurrentId={setCurrentId}/>
+    <Container maxWidth="100%">
+      <SiteNavbar />
+      <Container className={classes.container}>
+        <Grow in>
+          <Container style={{ marginTop: "5em" }}>
+            <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
+              <Grid container item justifyContent="center">
+                <Typography className={classes.heading} variant="h3">Blog</Typography>
+              </Grid>
+              <Grid contianer item xs={8} sm={8}>
+                <Posts />
+              </Grid>
             </Grid>
-            
-          </Grid>
-        </Container>
-      </Grow>
+          </Container>
+        </Grow>
+      </Container>
     </Container>
   );
 };

@@ -10,31 +10,35 @@ export default makeStyles((theme) => ({
   title: {
     display: "block",
     variant: "h4",
+    marginLeft: "3rem",
     [theme.breakpoints.down("md")]: {
       variant: "h6",
+      marginRight: "1rem"
     },
-    marginLeft: "1rem"
+    
   },
   sectionDesktop: {
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",
+      marginRight: "3rem"
     },
     alignItems: "stretch",
-    marginRight: "1rem"
   },
   sectionMobile: {
     display: "flex",
+    marginRight: "1rem",
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
     alignItems: "center",
-    marginRight: "1rem"
   },
   AppBar: {
     backgroundColor: "transparent",
     height: "4rem",
     display: "flex",
+    justifyContent: "center",
+
   },
   Navbar: {
     alignItems: "center",
