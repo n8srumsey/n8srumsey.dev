@@ -28,13 +28,14 @@ export const getPost = async (req, res) => {
 };
 
 export const createPost = async (req, res) => {
-  const { title, message, selectedFile, creator, tags } = req.body;
+  const { title, postURL, image, content, summary, tags } = req.body;
 
   const newBlogPost = new BlogPost({
     title,
-    message,
-    selectedFile,
-    creator,
+    postURL,
+    image,
+    content,
+    summary,
     tags,
   });
 
@@ -49,12 +50,12 @@ export const createPost = async (req, res) => {
 
 export const updatePost = async (req, res) => {
   const { id } = req.params;
-  const { title, message, creator, selectedFile, tags } = req.body;
+  const { title, postURL, image, content, summary, tags } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send(`No post with id: ${id}`);
 
-  const updatedPost = { creator, title, message, tags, selectedFile, _id: id };
+  const updatedPost = { title, postURL, image, content, summary, tags, _id: id };
 
   await BlogPost.findByIdAndUpdate(id, updatedPost, { new: true });
 

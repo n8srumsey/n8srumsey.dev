@@ -22,7 +22,7 @@ const Form = ({ currentId, setCurrentId, open, handleOpen, handleClose }) => {
     title: "",
     message: "",
     tags: "",
-    selectedFile: "",
+    image: "",
   });
   const post = useSelector((state) => (currentId ? state.posts.find((p) => p._id === currentId) : null));
   const classes = useStyles();
@@ -47,7 +47,6 @@ const Form = ({ currentId, setCurrentId, open, handleOpen, handleClose }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(currentId);
     if (currentId) {
       dispatch(updatePost(currentId, postData));
     } else {
@@ -89,6 +88,15 @@ const Form = ({ currentId, setCurrentId, open, handleOpen, handleClose }) => {
               onChange={(e) => setPostData({ ...postData, postURL: e.target.value })}
             />
             <CssTextField
+              name="tags"
+              label="Tags"
+              id="standard-textarea"
+              fullWidth
+              variant="standard"
+              value={postData.tags}
+              onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })}
+            />
+            <CssTextField
               name="summary"
               label="Summary"
               id="standard-textarea"
@@ -109,7 +117,7 @@ const Form = ({ currentId, setCurrentId, open, handleOpen, handleClose }) => {
               onChange={(e) => setPostData({ ...postData, content: e.target.value })}
             />
             <div className={classes.fileInput}>
-              <FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} />
+              <FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, image: base64 })} />
             </div>
           </DialogContent>
           <DialogActions className={classes.formDialog}>

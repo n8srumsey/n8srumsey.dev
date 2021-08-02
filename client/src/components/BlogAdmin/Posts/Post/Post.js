@@ -9,7 +9,7 @@ import useStyles from "./styles";
 import { useDispatch } from "react-redux";
 import { deletePost } from "../../../../actions/posts";
 
-import img from '../../../../images/download.jpg';
+import defaultImg from '../../../../images/download.jpg';
 
 const Post = ({ post, setCurrentId, handleOpen }) => {
   const classes = useStyles();
@@ -17,7 +17,7 @@ const Post = ({ post, setCurrentId, handleOpen }) => {
 
   return (
     <Card className={classes.card} >
-      <CardMedia className={classes.media} image={img} title={post.title} />
+      <CardMedia className={classes.media} image={post.image || defaultImg} title={post.title} />
       <div className={classes.overlay}>
         <Typography variant="body2"> {moment(post.createdAt).fromNow()} </Typography>
       </div>

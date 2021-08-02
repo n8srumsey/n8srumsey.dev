@@ -22,7 +22,6 @@ const BlogAdmin = () => {
     setOpen(true);
   };
   const handleClose = () => {
-    console.log(currentId)
     setOpen(false);
   };
 
@@ -38,7 +37,7 @@ const BlogAdmin = () => {
               </Grid>
               <Grid contianer item xs={8} sm={8}>
                 <Posts setCurrentId={setCurrentId} handleOpen={handleOpen}/>
-                <Form setCurrentId={setCurrentId} open={open} handleOpen={handleOpen} handleClose={handleClose} />
+                <Form currentId={currentId} setCurrentId={setCurrentId} open={open} handleOpen={handleOpen} handleClose={handleClose} />
               </Grid>
             </Grid>
           </Container>
