@@ -31,8 +31,8 @@ export default makeStyles((theme =>({
   },
   overlay2: {
     position: "absolute",
-    top: "20px",
-    right: "20px",
+    top: "14.5px",
+    right: "0px",
     color: "white",
   },
   grid: {

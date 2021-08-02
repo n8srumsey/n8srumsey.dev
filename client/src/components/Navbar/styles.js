@@ -2,6 +2,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import * as COLORS from "../../constants/colors";
 
 export default makeStyles((theme) => ({
+  root: {
+    '& .MuiList-root.MuiMenu-list.MuiList-padding': {
+      backgroundColor: COLORS.DP08,
+    },
+    '& .MuiPaper-root': {
+      backgroundColor: 'transparent'
+    },
+    '& .MuiMenuItem-root:hover': {
+      backgroundColor: COLORS.DP24,
+    }
+  },
   grow: {
     flexGrow: 1,
   },
@@ -52,5 +63,15 @@ export default makeStyles((theme) => ({
   },
   NavbarIcon: {
     marginTop: '4px'
+  },
+  mobileMenu: {
+    color: COLORS.TEXT_PRIMARY,
+    underline: 'hover',
+    paddingLeft: "2rem",
+    fontWeight: '',
+    
+  },
+  mobileMenuButton: {
+    color: COLORS.TEXT_PRIMARY,
   }
 }));

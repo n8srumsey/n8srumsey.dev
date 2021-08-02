@@ -6,7 +6,6 @@ import { getPosts } from "../../actions/posts";
 import Posts from "./Posts/Posts";
 import SiteNavbar from "../Navbar/SiteNavbar";
 import useStyles from "./styles";
-
 import Form from "./Widgets/Form/Form";
 
 const App = () => {
@@ -17,6 +16,15 @@ const App = () => {
   useEffect(() => {
     dispatch(getPosts());
   }, [currentId, dispatch]);
+
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setCurrentId(null);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Container maxWidth="100%">
@@ -29,8 +37,8 @@ const App = () => {
                 <Typography className={classes.heading} variant="h3">Blog Admin</Typography>
               </Grid>
               <Grid contianer item xs={8} sm={8}>
-                <Posts />
-                <Form />
+                <Posts setCurrentId={setCurrentId} handleClickOpen={handleClickOpen}/>
+                <Form setCurrentId={setCurrentId} open={open} handleClickOpen={handleClickOpen} handleClose={handleClose} />
               </Grid>
             </Grid>
           </Container>

@@ -8,29 +8,37 @@ export default makeStyles(() => ({
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
     },
+    '& .MuiDialog-paperFullScreen': {
+      backgroundColor: COLORS.DP24,
+    },
+    '& .MuiPaper-root': {
+      backgroundColor: 'transparent',
+      borderRadius: 12
+    }
   },
-  card: {
+  dialog: {
     padding: theme.spacing(2),
-    backgroundColor: COLORS.DP02,
-    borderRadius: 10,
+    borderRadius: 25,
   },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    backgroundColor: COLORS.DP24,
   },
   fileInput: {
     width: '97%',
     margin: '10px 0',
     color: COLORS.TEXT_SECONDARY
   },
-  buttonSubmit: {
-    marginBottom: 10,
-  },
-  buttonCancel: {
-  },
   formTitle: {
     color: COLORS.TEXT_PRIMARY,
     fontWeight: 600,
-  }
+  },
+  formDialog: {
+    backgroundColor: COLORS.DP24
+  },
+  formContextText: {
+    color: COLORS.TEXT_DISABLED
+  },
 }));

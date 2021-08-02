@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, AppBar, Toolbar, withStyles, MenuItem, Menu, IconButton, Link } from "@material-ui/core";
+import { Typography, AppBar, Toolbar, withStyles, MenuItem, Menu, IconButton, Link, useTheme } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -13,8 +13,10 @@ const SiteName = withStyles({
   }
 })(Typography);
 
+
 const SiteNavbar = (props) => {
-  const classes = useStyles();
+  const theme = useTheme();
+  const classes = useStyles(theme);
   const mobileMenuId = 'primary-navbar-menu-mobile';
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -35,25 +37,26 @@ const SiteNavbar = (props) => {
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
+      className={classes.root}
     >
       <MenuItem>
-        <Link href='/' className={classes.NavbarLink}>About</Link>
+        <Link href='/' className={classes.mobileMenu}>About</Link>
       </MenuItem>
       <MenuItem>
-        <Link href='/projects/' className={classes.NavbarLink}>Projects</Link>
+        <Link href='/projects/' className={classes.mobileMenu}>Projects</Link>
       </MenuItem>
       <MenuItem>  
-        <Link href='/resume/' className={classes.NavbarLink}>Resume</Link>
+        <Link href='/resume/' className={classes.mobileMenu}>Resume</Link>
       </MenuItem>
       <MenuItem>
-        <Link href='/blog/' className={classes.NavbarLink}>Blog</Link>
+        <Link href='/blog/' className={classes.mobileMenu}>Blog</Link>
       </MenuItem>
       <MenuItem>  
-        <Link href='https://github.com/n8srumsey' className={classes.NavbarLink}><GitHubIcon /></Link>
+        <Link href='https://github.com/n8srumsey' className={classes.mobileMenu}><GitHubIcon /></Link>
       </MenuItem>
       <MenuItem>
-        <Link href='https://www.linkedin.com/in/nathan-rumsey-66ab1320a/' className={classes.NavbarLink}><LinkedInIcon /></Link>
-      </MenuItem>        
+        <Link href='https://www.linkedin.com/in/nathan-rumsey-66ab1320a/' className={classes.mobileMenu}><LinkedInIcon /></Link>
+      </MenuItem>
     </Menu>
   );
 
@@ -77,7 +80,7 @@ const SiteNavbar = (props) => {
             aria-controls={mobileMenuId}
             aria-haspopup="true"
             onClick={handleMobileMenuOpen}
-            color="inherit"
+            className={classes.mobileMenuButton}
           >
             <MenuIcon  fontSize="medium" />
           </IconButton>

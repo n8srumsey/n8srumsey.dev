@@ -3,9 +3,10 @@ import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 
 import Portfolio from "./components/Portfolio";
-import { PRIMARY, SECONDARY } from "./constants/colors";
+import { PRIMARY, SECONDARY, DP08 } from "./constants/colors";
 
 const theme = createTheme({
+  type: 'dark',
   palette: {
     primary: {
       main: PRIMARY,
