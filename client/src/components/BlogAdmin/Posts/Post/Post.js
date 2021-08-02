@@ -11,7 +11,7 @@ import { deletePost } from "../../../../actions/posts";
 
 import img from '../../../../images/download.jpg';
 
-const Post = ({ post, setCurrentId, handleClickOpen }) => {
+const Post = ({ post, setCurrentId, handleOpen }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -42,7 +42,7 @@ const Post = ({ post, setCurrentId, handleClickOpen }) => {
       <CardActions className={classes.cardActions}>
         <Button size="small" color="primary" onClick={() => {
             setCurrentId(post._id);
-            handleClickOpen();
+            handleOpen();
           }}>
           <Edit fontSize="small" />
           &nbsp;Edit&nbsp;

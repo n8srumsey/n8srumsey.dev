@@ -4,7 +4,7 @@ import { Container, Grid, Grow, Typography } from "@material-ui/core";
 import useStyles from "./styles";
 import SiteNavbar from "../Navbar/SiteNavbar";
 
-const Projects = () => {
+const ProjectsAdmin = () => {
   const classes = useStyles();
 
   return (
@@ -28,4 +28,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsAdmin;

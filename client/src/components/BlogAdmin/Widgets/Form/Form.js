@@ -16,7 +16,7 @@ import CreateNewButton from "../CreateNewButton/CreateNewButton";
 import { createPost, updatePost } from "../../../../actions/posts";
 import CssTextField from "./CssTextField";
 
-const Form = ({ currentId, setCurrentId, open, handleClickOpen, handleClose }) => {
+const Form = ({ currentId, setCurrentId, open, handleOpen, handleClose }) => {
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
@@ -55,15 +55,18 @@ const Form = ({ currentId, setCurrentId, open, handleClickOpen, handleClose }) =
     }
     clear();
   };
-
+  const handleCreateNewClick = () => {
+    setCurrentId(null);
+    handleOpen();
+  }
   
 
   return (
     <div>
-      <CreateNewButton clickEvent={handleClickOpen} />
-      <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md" fullScreen={fullScreen} aria-labelledby="form-dialog-title" className={[classes.dialog, classes.root]}>
+      <CreateNewButton clickEvent={handleCreateNewClick} />
+      <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md" fullScreen={fullScreen} aria-labelledby="form-dialog-title" className={`${classes.dialog} ${classes.root}`}>
         <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-          <DialogTitle id="form-dialog-title" className={[classes.formDialog, classes.formTitle]}>
+          <DialogTitle id="form-dialog-title" className={`${classes.formDialog} ${classes.formTitle}`}>
             {currentId ? "Edit" : "Create"} a Blog Post
           </DialogTitle>
           <DialogContent className={classes.formDialog}>

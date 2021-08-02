@@ -3,7 +3,7 @@ import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 
 import Portfolio from "./components/Portfolio";
-import { PRIMARY, SECONDARY, DP08 } from "./constants/colors";
+import { PRIMARY, SECONDARY } from "./constants/colors";
 
 const theme = createTheme({
   type: 'dark',
@@ -21,9 +21,11 @@ const theme = createTheme({
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Portfolio />
-    </ThemeProvider>
+    <div>
+      <ThemeProvider theme={theme}>
+        <Portfolio />
+      </ThemeProvider>
+    </div>
   );
 };
 

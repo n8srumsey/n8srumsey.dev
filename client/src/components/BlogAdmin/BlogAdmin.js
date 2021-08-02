@@ -8,7 +8,7 @@ import SiteNavbar from "../Navbar/SiteNavbar";
 import useStyles from "./styles";
 import Form from "./Widgets/Form/Form";
 
-const App = () => {
+const BlogAdmin = () => {
   const [currentId, setCurrentId] = useState(null);
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -18,27 +18,27 @@ const App = () => {
   }, [currentId, dispatch]);
 
   const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    setCurrentId(null);
+  const handleOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
+    console.log(currentId)
     setOpen(false);
   };
 
   return (
-    <Container maxWidth="100%">
+    <Container>
       <SiteNavbar />
-      <Container className={classes.container}>
+      <Container>
         <Grow in>
           <Container style={{ marginTop: "5em" }}>
             <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
-              <Grid container item justifyContent="center">
+              <Grid item container justifyContent="center">
                 <Typography className={classes.heading} variant="h3">Blog Admin</Typography>
               </Grid>
               <Grid contianer item xs={8} sm={8}>
-                <Posts setCurrentId={setCurrentId} handleClickOpen={handleClickOpen}/>
-                <Form setCurrentId={setCurrentId} open={open} handleClickOpen={handleClickOpen} handleClose={handleClose} />
+                <Posts setCurrentId={setCurrentId} handleOpen={handleOpen}/>
+                <Form setCurrentId={setCurrentId} open={open} handleOpen={handleOpen} handleClose={handleClose} />
               </Grid>
             </Grid>
           </Container>
@@ -48,4 +48,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default BlogAdmin;

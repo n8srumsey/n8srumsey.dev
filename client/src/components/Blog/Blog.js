@@ -7,7 +7,7 @@ import Posts from "./Posts/Posts";
 import SiteNavbar from "../Navbar/SiteNavbar";
 import useStyles from "./styles";
 
-const App = () => {
+const Blog = () => {
   const [currentId, setCurrentId] = useState(null);
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -37,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Blog;

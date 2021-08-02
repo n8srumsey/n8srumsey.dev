@@ -64,15 +64,15 @@ const SiteNavbar = (props) => {
     <div className={classes.grow}>
     <AppBar className={classes.AppBar}>
       <Toolbar className={classes.Navbar}>
-      <SiteName edge="start" variant="h5" className={classes.title} nowrap >n8srumsey.dev</SiteName> 
+      <SiteName edge="start" variant="h5" className={classes.title} noWrap >n8srumsey.dev</SiteName> 
         <div className={classes.grow} />
         <div className={classes.sectionDesktop}>
           <Link href='/' className={classes.NavbarLink} variant="h6">About</Link>
           <Link href='/projects/' className={classes.NavbarLink} variant="h6">Projects</Link>
           <Link href='/resume/' className={classes.NavbarLink} variant="h6">Resume</Link>
           <Link href='/blog/' className={classes.NavbarLink} variant="h6">Blog</Link>
-          <Link href='https://github.com/n8srumsey' className={[classes.NavbarLink, classes.NavbarIcon]} variant="h6"><GitHubIcon /></Link>
-          <Link href='https://www.linkedin.com/in/nathan-rumsey-66ab1320a/' className={[classes.NavbarLink, classes.NavbarIcon]} variant="h6"><LinkedInIcon /></Link>
+          <Link href='https://github.com/n8srumsey' className={`${classes.NavbarLink} ${classes.NavbarIcon}`} variant="h6"><GitHubIcon /></Link>
+          <Link href='https://www.linkedin.com/in/nathan-rumsey-66ab1320a/' className={`${classes.NavbarLink} ${classes.NavbarIcon}`} variant="h6"><LinkedInIcon /></Link>
         </div>
         <div className={classes.sectionMobile}>
           <IconButton
