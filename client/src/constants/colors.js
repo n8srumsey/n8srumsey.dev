@@ -6,8 +6,8 @@ export const INFO = '#64b5f6';
 export const SUCCESS = '#81c784';
 
 export const TEXT_PRIMARY = '#fff';
-export const TEXT_SECONDARY = 'rgba(255, 255, 255, 0.7)';
-export const TEXT_DISABLED = 'rgba(255, 255, 255, 0.5)';
+export const TEXT_SECONDARY = 'rgba(255, 255, 255, 0.6)';
+export const TEXT_DISABLED = 'rgba(255, 255, 255, 0.4)';
 
 export const DP00 = '#1E1E1E';
 export const DP01 = '#232323';

@@ -9,9 +9,10 @@ export default makeStyles(() => ({
       margin: theme.spacing(1),
     },
   },
-  paper: {
+  card: {
     padding: theme.spacing(2),
     backgroundColor: COLORS.DP02,
+    borderRadius: 10,
   },
   form: {
     display: 'flex',

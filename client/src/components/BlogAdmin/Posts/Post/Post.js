@@ -28,7 +28,7 @@ const Post = ({ post, setCurrentId }) => {
         </Button>
       </div>
       <div className={classes.details}>
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body2">
           &nbsp;#Tag&nbsp;
         </Typography>
       </div>
@@ -36,7 +36,7 @@ const Post = ({ post, setCurrentId }) => {
         &nbsp;TITLE&nbsp;
       </Typography>
       <CardContent>
-        <Typography className={classes.message} variant="body2" color="textSecondary" compoonent="p">
+        <Typography className={classes.description} variant="body2" color="textSecondary" compoonent="p">
           *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY* *SUMMARY*
         </Typography>
       </CardContent>

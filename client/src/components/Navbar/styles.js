@@ -45,7 +45,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   NavbarLink: {
-    color: 'inherit',
+    color: COLORS.TEXT_PRIMARY,
     underline: 'hover',
     paddingLeft: "2rem",
     fontWeight: '',

@@ -6,7 +6,6 @@ import { getPosts } from "../../actions/posts";
 import Posts from "./Posts/Posts";
 import SiteNavbar from "../Navbar/SiteNavbar";
 import useStyles from "./styles";
-import CreateNewButton from "./Widgets/CreateNewButton/CreateNewButton";
 
 import Form from "./Widgets/Form/Form";
 
@@ -37,7 +36,6 @@ const App = () => {
           </Container>
         </Grow>
       </Container>
-      <CreateNewButton />
     </Container>
   );
 };

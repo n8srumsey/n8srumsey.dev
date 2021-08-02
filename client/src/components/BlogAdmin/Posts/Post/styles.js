@@ -42,13 +42,18 @@ export default makeStyles((theme =>({
     display: "flex",
     justifyContent: "space-between",
     margin: "20px",
+    color: COLORS.TEXT_SECONDARY,
   },
   title: {
     padding: "0 16px",
+    color: COLORS.TEXT_PRIMARY
   },
   cardActions: {
     padding: "0 16px 8px 16px",
     display: "flex",
     justifyContent: "space-between",
   },
+  description: {
+    color: COLORS.TEXT_SECONDARY
+  }
 })));

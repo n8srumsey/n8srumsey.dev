@@ -5,15 +5,12 @@ import IconButton from '@material-ui/core/IconButton';
 import styles from './styles';
 
 
-const CreateNewButton = () => {
+const CreateNewButton = (props) => {
     const classes = styles();
-    const handleClick = () => {
-
-    }
     
     return (
         <div>
-            <IconButton onClick={handleClick} className={classes.createNew}>
+            <IconButton onClick={props.clickEvent} className={classes.createNew}>
                 <CreateIcon />
             </IconButton>
         </div>
