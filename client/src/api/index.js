@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { IP } from '../constants/urls';
 
-const url = 'http://localhost:5000/posts';
+const url = `http://${IP}:5000/posts`;
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
