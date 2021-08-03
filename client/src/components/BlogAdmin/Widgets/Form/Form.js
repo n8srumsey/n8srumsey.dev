@@ -82,6 +82,7 @@ const Form = ({ currentId, setCurrentId, open, handleOpen, handleClose }) => {
             <CssTextField
               name="postURL"
               label="Post URL"
+              id="standard-textarea"
               fullWidth
               variant="standard"
               value={postData.postURL}
