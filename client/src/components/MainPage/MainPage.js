@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Grid, Grow, Typography } from "@material-ui/core";
 
 import useStyles from "./styles";
-import SiteNavbar from "../Navbar/MainPageNavbar";
+import SiteNavbar from "../Navbar/StaticNavbar";
 
 const Projects = () => {
   const classes = useStyles();
