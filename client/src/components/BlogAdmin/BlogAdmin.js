@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 
 import { getPosts } from "../../actions/posts";
 import Posts from "./Posts/Posts";
-import SiteNavbar from "../Navbar/SiteNavbar";
+import SiteNavbar from "../Navbar/RouterNavbar";
 import useStyles from "./styles";
 import Form from "./Widgets/Form/Form";
 

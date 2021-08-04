@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Grid, Grow, Typography } from "@material-ui/core";
 
 import useStyles from "./styles";
-import SiteNavbar from "../Navbar/SiteNavbar";
+import SiteNavbar from "../Navbar/MainPageNavbar";
 
 const Projects = () => {
   const classes = useStyles();
@@ -15,9 +15,9 @@ const Projects = () => {
           <Container style={{ marginTop: "5em" }}>
             <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
               <Grid container item justifyContent="center">
-                <Typography className={classes.heading} variant="h3">Projects</Typography>
+                <Typography className={classes.heading} variant="h3">Main Page</Typography>
               </Grid>
-              <Grid contianer item xs={8} sm={8} note="projects go in this grid">
+              <Grid contianer item xs={8} sm={8}>
                 
               </Grid> 
             </Grid>
