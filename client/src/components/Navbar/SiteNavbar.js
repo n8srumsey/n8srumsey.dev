@@ -81,16 +81,16 @@ const SiteNavbar = (props) => {
       <AppBar className={classes.AppBar}>
         <Toolbar className={classes.Navbar} justify='space-between'>
           <div className={`${classes.sectionDesktop} ${classes.grow}`}>
-            <Grid container alignItems='center' justifyContent='space-between' direction='row' fullWidth>
+            <Grid container alignItems='center' justifyContent='space-between' direction='row'>
               <Grid item>
                 <SiteName variant="h4" className={classes.title} noWrap >n8srumsey.dev</SiteName>
               </Grid>
               <Grid item>
-                <Tabs centered value={tabValue}>
-                  <Tab label={<Typography>About</Typography>} to='/' className={classes.tabLink} component={RouterLink} centered index={0}/>
-                  <Tab label={<Typography>Projects</Typography>} to='/projects' className={classes.tabLink} component={RouterLink} centered index={1}/>
-                  <Tab label={<Typography>Resume</Typography>} to='/resume' className={classes.tabLink} component={RouterLink} centered index={2}/>
-                  <Tab label={<Typography>Blog</Typography>} to='/blog' className={classes.tabLink} component={RouterLink} centered index={3}/>
+                <Tabs centered={true} value={tabValue}>
+                  <Tab label={<Typography>About</Typography>} to='/' className={classes.tabLink} component={RouterLink} index={0}/>
+                  <Tab label={<Typography>Projects</Typography>} to='/projects' className={classes.tabLink} component={RouterLink} index={1}/>
+                  <Tab label={<Typography>Resume</Typography>} to='/resume' className={classes.tabLink} component={RouterLink} index={2}/>
+                  <Tab label={<Typography>Blog</Typography>} to='/blog' className={classes.tabLink} component={RouterLink} index={3}/>
                 </Tabs>
               </Grid>
               <Grid item>
@@ -110,7 +110,7 @@ const SiteNavbar = (props) => {
             </Grid>
           </div>
           <div className={`${classes.sectionMobile} ${classes.grow}`}>
-            <Grid container alignItems='center' justifyContent='space-between' direction='row' fullWidth>
+            <Grid container alignItems='center' justifyContent='space-between' direction='row'>
               <SiteName edge='start' variant="h4" className={classes.title} noWrap >n8srumsey.dev</SiteName>
               <IconButton
                 aria-label="show more"

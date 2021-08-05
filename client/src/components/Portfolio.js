@@ -8,6 +8,7 @@ import BlogAdmin from './BlogAdmin/BlogAdmin';
 import Projects from './Projects/Projects';
 import ProjectsAdmin from './ProjectsAdmin/ProjectsAdmin';
 import SiteNavbar from "./Navbar/SiteNavbar";
+import Resume from "./Resume/Resume";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
         <Redirect from='/about' to='/' />
         <Route exact path='/blog' component = {Blog}/>
         <Route exact path='/projects' component = {Projects}/> 
-        <Route exact path='/resume' component={MainPage}/>
+        <Route exact path='/resume' component={Resume}/>
         <Route exact path='/blog/admin' component = {BlogAdmin}/>
         <Route exact path='/projects/admin' component = {ProjectsAdmin}/>
         <Route path='/blog/:postId' component = {BlogAdmin}/>
