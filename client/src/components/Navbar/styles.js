@@ -23,7 +23,7 @@ export default makeStyles((theme) => ({
     display: "block",
     marginLeft: "3rem",
     [theme.breakpoints.down("md")]: {
-      marginRight: "1rem"
+      marginLeft: "1rem"
     },
     
   },
