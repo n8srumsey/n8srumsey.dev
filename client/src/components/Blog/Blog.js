@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 
 import { getPosts } from "../../actions/posts";
 import Posts from "./Posts/Posts";
-import SiteNavbar from "../Navbar/RouterNavbar";
 import useStyles from "./styles";
 
 const Blog = () => {
@@ -18,7 +17,6 @@ const Blog = () => {
 
   return (
     <Container maxWidth="100%">
-      <SiteNavbar />
       <Container className={classes.container}>
         <Grow in>
           <Container style={{ marginTop: "5em" }}>

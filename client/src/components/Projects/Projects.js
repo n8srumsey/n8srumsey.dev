@@ -2,14 +2,12 @@ import React from "react";
 import { Container, Grid, Grow, Typography } from "@material-ui/core";
 
 import useStyles from "./styles";
-import SiteNavbar from "../Navbar/RouterNavbar";
 
 const Projects = () => {
   const classes = useStyles();
 
   return (
     <Container maxWidth="100%">
-      <SiteNavbar />
       <Container className={classes.container}>
         <Grow in>
           <Container style={{ marginTop: "5em" }}>

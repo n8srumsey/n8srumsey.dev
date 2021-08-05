@@ -21,17 +21,15 @@ export default makeStyles((theme) => ({
   },
   title: {
     display: "block",
-    variant: "h4",
     marginLeft: "3rem",
     [theme.breakpoints.down("md")]: {
-      variant: "h6",
       marginRight: "1rem"
     },
     
   },
   sectionDesktop: {
     display: "none",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       display: "flex",
       marginRight: "3rem"
     },
@@ -40,29 +38,28 @@ export default makeStyles((theme) => ({
   sectionMobile: {
     display: "flex",
     marginRight: "1rem",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       display: "none",
     },
     alignItems: "center",
   },
   AppBar: {
     backgroundColor: COLORS.DP04,
-    height: "4rem",
+    height: "5rem",
     display: "flex",
     justifyContent: "center",
 
   },
   Navbar: {
     alignItems: "center",
+    innerWidth: '100%',
   },
   NavbarLink: {
     color: COLORS.TEXT_PRIMARY,
-    underline: 'hover',
-    paddingLeft: "2rem",
-    fontWeight: '',
+    padding: 0,
   },
   NavbarIcon: {
-    marginTop: '4px'
+    color: COLORS.TEXT_PRIMARY,
   },
   mobileMenu: {
     color: COLORS.TEXT_PRIMARY,
@@ -73,5 +70,13 @@ export default makeStyles((theme) => ({
   },
   mobileMenuButton: {
     color: COLORS.TEXT_PRIMARY,
+  },
+  tabLink: {
+    color: COLORS.TEXT_PRIMARY,
+  },
+  navbarIconDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    marginTop: '5px'
   }
 }));

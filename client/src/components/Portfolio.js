@@ -7,12 +7,12 @@ import Blog from './Blog/Blog';
 import BlogAdmin from './BlogAdmin/BlogAdmin';
 import Projects from './Projects/Projects';
 import ProjectsAdmin from './ProjectsAdmin/ProjectsAdmin';
-import RouterNavbar from './Navbar/RouterNavbar';
-
+import SiteNavbar from "./Navbar/SiteNavbar";
 
 const App = () => {
   return (
     <Router>
+      <SiteNavbar />
       <Switch>
         <Route exact path='/' component={MainPage}/>
         <Redirect from='/about' to='/' />
@@ -21,27 +21,11 @@ const App = () => {
         <Route exact path='/resume' component={MainPage}/>
         <Route exact path='/blog/admin' component = {BlogAdmin}/>
         <Route exact path='/projects/admin' component = {ProjectsAdmin}/>
+        <Route path='/blog/:postId' component = {BlogAdmin}/>
+        <Route path='/project/:projectId' component = {ProjectsAdmin}/> 
       </Switch>
     </Router>
   );
 };
 
 export default App;
-
-/* 
- * 
-    <Router>
-      <Switch>
-        <Route exact path='/' component={MainPage}/>
-        <Route exact path='/blog' component = {RouterNavbar}/>
-        <Route exact path='/blog/admin' component = {BlogAdmin}/>
-        <Route path='/blog/:postId' component = {RouterNavbar}/>
-        <Route path='/blog/admin/:postId' component = {RouterNavbar}/>
-        <Route exact path='/projects' component = {RouterNavbar}/>
-        <Route path='/project/:projectId' component = {ProjectsAdmin}/> 
-        <Route exact path='/projects/admin' component = {RouterNavbar}/>
-        <Route path='/projects/admin/:projectId' component = {RouterNavbar}/>
-      </Switch>
-    </Router>
- * 
- */
